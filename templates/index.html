@@ -4,6 +4,7 @@
   <title>DoctorChatBot</title>
   <link rel="stylesheet" type="text/css" href="static/CSS/index.css">
 </head>
+</head>
 <body>
   <div id="login-container">
     <h1>Welcome to Doctor ChatBot</h1>
@@ -13,9 +14,9 @@
       <button type="submit">Login</button>
     </form>
   </div>
-
   <div id="chat-container">
     <div id="header">
+      <img id="image"  width="60px" height="25px" src="static/DrBot.jpg" />
       <h1>Doctor ChatBot</h1>
     </div>
     <div id="chat-log"></div>
@@ -26,8 +27,11 @@
     <div id="recommendation-container">
       <h3>Recommended Messages:</h3>
       <ul id="recommendation-list">
-        <li onclick="addRecommendationToInput('Hello')">Hello Doctor.</li>
-        <li onclick="addRecommendationToInput('How are you?')">How are you?</li>
+        <li onclick="addRecommendationToInput('Hello Doctor.')">Hello Doctor.</li>
+        <li onclick="addRecommendationToInput('What are the common symptoms of COVID-19?')">What are the common symptoms of COVID-19?</li>
+        <li onclick="addRecommendationToInput('Can you recommend any healthy diet plans?')">Can you recommend any healthy diet plans?</li>
+        <li onclick="addRecommendationToInput('How can I manage stress?')">How can I manage stress?</li>
+        <li onclick="addRecommendationToInput('What exercises are suitable for beginners?')">What exercises are suitable for beginners?</li>
       </ul>
     </div>
   </div>

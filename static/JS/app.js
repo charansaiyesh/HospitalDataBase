@@ -10,6 +10,21 @@ userMessageInput.addEventListener("keydown", function (event) {
   }
 });
 
+// function appendMessage(role, content) {
+//   const messageElement = document.createElement("div");
+//   messageElement.classList.add("message");
+//   messageElement.classList.add(role);
+
+//   const messageCard = document.createElement("div");
+//   messageCard.classList.add("message-card");
+//   messageCard.textContent = content;
+
+//   messageElement.appendChild(messageCard);
+
+//   chatContainer.querySelector("#chat-log").appendChild(messageElement);
+//   chatContainer.scrollTop = chatContainer.scrollHeight;
+// }
+
 function appendMessage(role, content) {
   const messageElement = document.createElement("div");
   messageElement.classList.add("message");
@@ -21,9 +36,13 @@ function appendMessage(role, content) {
 
   messageElement.appendChild(messageCard);
 
-  chatContainer.querySelector("#chat-log").appendChild(messageElement);
-  chatContainer.scrollTop = chatContainer.scrollHeight;
+  const chatLog = chatContainer.querySelector("#chat-log");
+  chatLog.appendChild(messageElement);
+  chatLog.scrollTop = chatLog.scrollHeight - chatLog.clientHeight;  
 }
+
+
+
 
 function addRecommendationToInput(message) {
   userMessageInput.value = message;
